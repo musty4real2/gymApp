@@ -11,6 +11,7 @@ const Home = () => {
             <HeroBanner />
             <SearchExercises />
             <Exercises />
+            {/* new section component */}
 
         </Box>
     )
