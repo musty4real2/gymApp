@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import {Box, Button, Stack, TextField, Typography} from '@mui/material';
-
+// typograhy is used for text 
+// stack is used for stacking/ piling items
 
 const SearchExercises = () => {
     return (
