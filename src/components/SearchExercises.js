@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import {Box, Button, Stack, TextField, Typography} from '@mui/material';
+import { exerciseOptions, fetchData } from '../utils/fetchData';
 // typograhy is used for text 
 // stack is used for stacking/ piling items
 
@@ -7,7 +8,8 @@ const SearchExercises = () => {
     const [search,setSearch] =useState('');
     const handleSearch = async() => {
         if(search){
-            // const exercisesData = await fetchData();
+            const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
+            console.log(exercisesData);
         }
     }
     return (
@@ -25,7 +27,7 @@ const SearchExercises = () => {
         }}
                 height='76px'
                 value={search}
-                onChange={(e)=>setSearch(e.target.value.toLowerCase)}
+                onChange={(e)=>setSearch(e.target.value.toLowerCase())}
                 placeholder='Search Exercise'
                 type='text'
 
