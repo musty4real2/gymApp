@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {Box, Button, Stack, TextField, Typography} from '@mui/material';
 import { exerciseOptions, fetchData } from '../utils/fetchData';
+import HorizontalScrollbar from './HorizontalScrollbar';
 // typograhy is used for text 
 // stack is used for stacking/ piling items
 
@@ -72,7 +73,7 @@ const SearchExercises = () => {
             </Box>
 
             <Box sx={{ position:'relative', width:'100%', p:'20px'}}>
-                <HorizontalScrollbar data={bodyParts}/>
+                <HorizontalScrollbar data={bodyParts} />
             </Box>
             </Stack>
     )
